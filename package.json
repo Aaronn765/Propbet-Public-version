@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "type": "module",
-  "description": "Sanitized engineering case study for a transactional sports platform",
+  "description": "Public engineering edition of a sports betting prop firm platform with transactional bet execution, risk rules, ledger accounting and PostgreSQL concurrency control",
   "engines": {
     "node": ">=22"
   },
