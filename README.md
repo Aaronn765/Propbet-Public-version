@@ -13,6 +13,28 @@ The platform manages the lifecycle of an evaluation account: challenge activatio
 
 [Version française](README.fr.md)
 
+
+## Engineering portfolio | Quick review
+
+**Role:** End-to-end software engineering, transactional backend and automated data processing.  
+**Production product:** [Oddelyx](https://oddelyx.com) | **Public, runnable case study:** this repository.
+
+| Engineering problem | Evidence in this repository |
+| --- | --- |
+| Prevent double spending under concurrent requests | [PostgreSQL transactions, row locking and idempotency](docs/transactions-and-concurrency.md) |
+| Keep financial operations traceable | [Ledger, account balances and settlement corrections](docs/accounting-and-curves.md) |
+| Validate software behaviour | [Unit and PostgreSQL integration tests](docs/testing.md) and the CI workflow |
+| Secure critical application flows | [Security and cryptography notes](docs/security.md) |
+
+**How to evaluate the code:** `npm install && npm test`. For transactional integration tests, start PostgreSQL using `docker compose -f compose.test.yaml up -d --wait`, then run `npm run test:postgres` with `DEMO_TEST_DATABASE_URL` set as documented below.
+
+**Related project:** [Stockoo](https://github.com/Aaronn765/Stockoo-Public-version), a multi-store inventory SaaS with transactional stock handling and access control.
+
+**Scope:** the public version is an independently written technical demonstration; the production source code and real-world user data remain private.
+
+---
+
+
 ## Product concept
 
 PropBet adds an evaluation layer on top of sports betting.
